@@ -5,3 +5,6 @@ def index(request):
         'restaurant_name' : settings.RESTAURANT_NAME
     }
     return render(request, 'home/index.html')
+
+def about(request):
+    return render(request, 'home/about.html')
