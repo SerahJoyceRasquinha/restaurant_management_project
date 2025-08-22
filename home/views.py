@@ -14,3 +14,9 @@ def about(request):
 
 def contact(request):
     return render(request, 'home/contact.html')
+
+def menu(request):
+    menu_items = [
+       {'name': 'Apple', 'price': 'Rs.30'},
+       {'name': 'Orange', 'price': 'Rs.35'}, 
+    ]
