@@ -11,3 +11,6 @@ def about(request):
         'phone_number' : settings.RESTAURANT_PHONE_NUMBER
     }
     return render(request, 'home/about.html')
+
+def contact(request):
+    return render(request, 'home/contact.html')
