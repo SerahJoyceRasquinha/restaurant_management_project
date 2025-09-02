@@ -16,7 +16,11 @@ def contact(request):
     return render(request, 'home/contact.html')
 
 def menu(request):
-    menu_items = [
-       {'name': 'Apple', 'price': 'Rs.30'},
-       {'name': 'Orange', 'price': 'Rs.35'}, 
+    try:
+        items = MenuItem.objects.all()
+    except DatabaseError:
+        items = []
+        error_message = "Sorry."
+        return render(request, 'home/menu.html', {'items': items, 'error': error_message})
+    return render(request, 'home/menu.html', {'items': items}) 
     ]
