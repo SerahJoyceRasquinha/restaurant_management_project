@@ -105,7 +105,10 @@
         <section class="hero">
             <h2>Welcome to {{ restaurant_name }} </h2>
             <p>Efficiently manage your Restaurant's products, orders and accounts all in one place. </p>
-            <a href="#"> Get Started </a>
+            <form method="get" action="#">
+                <input type="text" name="q" placeholder="Search menu items...">
+                <button type="submit">Search</button>
+            </form>
         </section>
 
         <section class="features">
